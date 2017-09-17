@@ -1,0 +1,5 @@
+//The first command text detaches a database.  True is passed in to drop any connections.
+//The second command text attaches a database.  We must provide a name and the location of the MDF file and the LDF file.
+
+string cmdText = "EXEC sp_detach_db 'MyDatabaseName', 'true'";
+string cmdText = @"EXEC sp_attach_db @dbName = N'MyDatabaseName',@filename1=N'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\MyDatabase.mdf',@filename2=N'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\MyDatabase.ldf'";
